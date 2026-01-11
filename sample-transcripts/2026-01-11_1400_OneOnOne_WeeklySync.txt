@@ -1,0 +1,35 @@
+2026-01-11 14:00 - Weekly Sync - John Doe and Jane Smith
+
+John: Hi Jane, thanks for meeting today. I wanted to discuss the progress on the API integration project.
+
+Jane: Of course! We've made good progress this week. The authentication layer is now complete, and we're working on the data sync functionality.
+
+John: That's great news. How's the team feeling about the timeline?
+
+Jane: Pretty good, but we're having some issues with the rate limiting on the external API. It's slower than we expected, which might impact our delivery date.
+
+John: Okay, that's important to know. Can you reach out to their support team by Wednesday to get clarification on their rate limits and see if there are any optimizations we can make?
+
+Jane: Absolutely, I'll handle that this week.
+
+John: Perfect. Also, we need to decide on the caching strategy for this integration. I've been thinking Redis would be a good fit given our latency requirements.
+
+Jane: I agree completely. Redis makes sense here. We're already using it for other services, so it'll integrate well with our existing infrastructure.
+
+John: Excellent. I'll document that architectural decision and share it with the broader team in our next architecture review meeting.
+
+Jane: Sounds good. One more thing - we found a potential security issue with how we're handling API tokens. Nothing critical, but we should address it before going to production.
+
+John: Definitely. Can you create a ticket for that and prioritize it for next sprint?
+
+Jane: Will do. I'll get that in the backlog today.
+
+John: Great. I think that covers everything. Is there anything else you need from me?
+
+Jane: No, I think we're good. This was really helpful.
+
+John: Perfect. Same time next week?
+
+Jane: Yep, works for me. Thanks John!
+
+John: Thanks Jane, have a great week!

@@ -1,0 +1,68 @@
+Analyze this meeting transcript and extract the following information:
+
+1. **Participants**: Identify all people mentioned in the transcript. Extract their names and try to determine their role in the meeting (organizer, attendee).
+
+2. **Key Points**: Identify 3-5 most important discussion topics or points covered in the meeting.
+
+3. **Decisions**: Extract any concrete decisions that were made during the meeting.
+
+4. **Action Items**: Identify tasks or action items mentioned, including:
+   - Description of the action
+   - Who is assigned (assignee) - extract the person's name if mentioned
+   - Due date if mentioned (in YYYY-MM-DD format)
+   - Priority level (high, medium, or low) based on urgency indicators in the conversation
+
+5. **Sentiment**: Assess the overall sentiment/tone of the meeting. Choose one:
+   - positive: meeting was productive, collaborative, positive outcomes
+   - negative: contentious, disagreements, negative outcomes
+   - neutral: informational, matter-of-fact discussion
+   - mixed: combination of positive and negative elements
+
+6. **Tone**: Assess the meeting atmosphere. Choose one:
+   - formal: professional, structured, business-like
+   - casual: relaxed, informal, friendly
+   - tense: stressful, urgent, high-stakes
+   - collaborative: team-oriented, cooperative, engaging
+
+7. **Summary**: Provide a 2-3 sentence overall summary of the meeting.
+
+Return your analysis as valid JSON with this exact structure (no additional text before or after the JSON):
+{
+  "participants": [
+    {
+      "name": "Full Name",
+      "role": "organizer|attendee"
+    }
+  ],
+  "keyPoints": [
+    "Key point 1",
+    "Key point 2"
+  ],
+  "decisions": [
+    "Decision 1",
+    "Decision 2"
+  ],
+  "actionItems": [
+    {
+      "description": "Task description",
+      "assignee": "Person Name or null",
+      "dueDate": "YYYY-MM-DD or null",
+      "priority": "high|medium|low"
+    }
+  ],
+  "sentiment": "positive|negative|neutral|mixed",
+  "tone": "formal|casual|tense|collaborative",
+  "summaryText": "2-3 sentence summary of the meeting"
+}
+
+Important instructions:
+- If no participants are explicitly named, return an empty participants array
+- If no decisions were made, return an empty decisions array
+- If no action items were identified, return an empty actionItems array
+- Use null for assignee if not mentioned
+- Use null for dueDate if not mentioned
+- Be concise but accurate in your analysis
+- Only return the JSON, no additional commentary
+
+Transcript:
+{transcript}
